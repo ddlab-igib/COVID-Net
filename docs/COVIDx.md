@@ -20,7 +20,7 @@ The current COVIDx dataset is constructed by the following open source chest rad
  * go to this [link](https://www.kaggle.com/tawsifurrahman/covid19-radiography-database) to download the COVID-19 Radiography database. Only the COVID-19 image folder and metadata file is required. The overlaps between covid-chestxray-dataset are handled
  * go to this [link](https://www.kaggle.com/c/rsna-pneumonia-detection-challenge/data) to download the RSNA pneumonia dataset
 2. Create a `data` directory and within the data directory, create a `train` and `test` directory
-3. Use [create\_COVIDx\_v3.ipynb](https://github.com/ddlab-igib/COVID-Net/blob/master/create_COVIDx.ipynb) to combine the three dataset to create COVIDx. Make sure to remember to change the file paths.
+3. Use [create\_COVIDx.ipynb](https://github.com/ddlab-igib/COVID-Net/blob/master/create_COVIDx.ipynb) to combine the three dataset to create COVIDx. Make sure to remember to change the file paths.
 4. We provide the train and test txt files with patientId, image path and label (normal, pneumonia or COVID-19). The description for each file is explained below:
  * [train\_COVIDx2.txt](../train_COVIDx3.txt): This file contains the samples used for training COVIDNet-CXR.
  * [test\_COVIDx2.txt](../test_COVIDx3.txt): This file contains the samples used for testing COVIDNet-CXR.
