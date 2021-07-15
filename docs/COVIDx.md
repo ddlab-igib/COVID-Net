@@ -2,8 +2,6 @@
 
 COVIDx1k dataset, used for testing in [CovBaseAI paper](https://www.medrxiv.org/content/10.1101/2020.10.20.20213793v1) and its Ground Truth CSV is available inside the repository at the following location: [Link](../COVIDx1k) 
 
-You can also download the original unmodified datasets as listed below:
-
 ## COVIDx1k data distribution
 
 Chest radiography images distribution in COVIDx1k
