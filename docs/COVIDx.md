@@ -1,19 +1,29 @@
-# COVIDx Dataset
-**Update 06/26/2020: Released new dataset with over 14000 CXR images containing 473 COVID-19 train samples. Test dataset remains the same for consistency.**\
-**Update 05/13/2020: Released new dataset with 258 COVID-19 train and 100 COVID-19 test samples. There are constantly new xray images being added to covid-chestxray-dataset, Figure1, Actualmed and COVID-19 radiography database so we included train_COVIDx3.txt and test_COVIDx3.txt, which are the xray images we used for training and testing of the CovidNet-CXR3 models.**
+# Steps to download the COVIDx1k dataset used for testing in CovBaseAI paper
 
-The current COVIDx dataset is constructed by the following open source chest radiography datasets:
+COVIDx1k dataset, used for testing in [CovBaseAI paper](https://www.medrxiv.org/content/10.1101/2020.10.20.20213793v1) and its Ground Truth CSV is available inside the repository at the following location: [Link](../COVIDx1k) 
+
+You can also download the original unmodified datasets as listed below:
+
+## COVIDx1k data distribution
+
+Chest radiography images distribution in COVIDx1k
+|  Type | Number of images |
+|:-----:|:------:|
+| Normal | 885 |
+|  COVID-19 | 100 |
+|  Total | 985 |
+
+# [COVIDx](https://github.com/lindawangg/COVID-Net) Dataset (last updated: 06/26/2020)
+
+<!--We especially thank the Radiological Society of North America, National Institutes of Health, Figure1, Actualmed, M.E.H. Chowdhury et al., Dr. Joseph Paul Cohen and the team at MILA involved in the COVID-19 image data collection project for making data available to the global community.-->
+
+The COVIDx dataset is constructed by the following open source chest radiography datasets:
 * https://github.com/ieee8023/covid-chestxray-dataset
 * https://github.com/agchung/Figure1-COVID-chestxray-dataset
 * https://github.com/agchung/Actualmed-COVID-chestxray-dataset
 * https://www.kaggle.com/tawsifurrahman/covid19-radiography-database
 * https://www.kaggle.com/c/rsna-pneumonia-detection-challenge (which came from: https://nihcc.app.box.com/v/ChestXray-NIHCC)
 
-<!--We especially thank the Radiological Society of North America, National Institutes of Health, Figure1, Actualmed, M.E.H. Chowdhury et al., Dr. Joseph Paul Cohen and the team at MILA involved in the COVID-19 image data collection project for making data available to the global community.-->
-
-## Steps to generate the dataset
-
-1. Download the datasets listed above
  * `git clone https://github.com/ieee8023/covid-chestxray-dataset.git`
  * `git clone https://github.com/agchung/Figure1-COVID-chestxray-dataset.git`
  * `git clone https://github.com/agchung/Actualmed-COVID-chestxray-dataset.git`
@@ -24,17 +34,3 @@ The current COVIDx dataset is constructed by the following open source chest rad
 4. We provide the train and test txt files with patientId, image path and label (normal, pneumonia or COVID-19). The description for each file is explained below:
  * [train\_COVIDx2.txt](../train_COVIDx3.txt): This file contains the samples used for training COVIDNet-CXR.
  * [test\_COVIDx2.txt](../test_COVIDx3.txt): This file contains the samples used for testing COVIDNet-CXR.
-
-## COVIDx data distribution
-
-Chest radiography images distribution
-|  Type | Normal | Pneumonia | COVID-19 | Total |
-|:-----:|:------:|:---------:|:--------:|:-----:|
-| train |  7966  |    5459   |   473    | 13898 |
-|  test |   100  |     100   |   100    |   300 |
-
-Patients distribution
-|  Type | Normal | Pneumonia | COVID-19 |  Total |
-|:-----:|:------:|:---------:|:--------:|:------:|
-| train |  7966  |    5444   |    320   |  13730 |
-|  test |   100  |      98   |     74   |    272 |
